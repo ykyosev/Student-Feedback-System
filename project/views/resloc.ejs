@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Search by Location</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Students Feedback System</h1>
+    </div>
+  </header>
+
+  <div class="container">
+   <h3>Search by Location</h3>
+   <a href="/" class="button">Home</a><br>
+   </div>
+   <br>
+
+   <div class="container">
+   <table border="1">
+    <tr>
+      <td>Location</td>
+      <td>Date</td>
+      <td>Time</td>
+      <td>Answer</td>
+    </tr>
+    <% for(var i=0; i < answer.length; i++) { %>
+    <tr>
+     <td><%- answer[i].location %></td>
+     <td><%- answer[i].date %></td>
+     <td><%- answer[i].time %></td>
+     <td><%- answer[i].answer %></td>
+    </tr>
+    <% } %>
+   </table>
+  </div>
+  
+  <br>
+  <footer></footer>
+</body>
+</html> 

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home Page</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Students Feedback System</h1>
+    </div>
+  </header>
+  <section id="intro"> 
+    <div class="container"> 
+      <h3><p>Welcome to the home page of the student feedback system.</p> <p>The system provides access to all the feedback which has been given by QMUL students using our Raspberry Pi devices deployed around university premises.</p>
+      </h3>
+    </div>
+ </section>
+  <div class="container">
+    <h4>Search within our database</h4>
+    <p>Below you can search through feedback collected by all the Raspberry Pis (feedback machines) by location, feedback answer and date. </p>
+  </div>
+  <div class="container">
+    <section class="boxes">
+      <h5>Search by location</h5>
+      <p>Please, provide a location for one of our machines currently deployed at QMUL. <br> Here is a full list of machine locations:</p> <p style="color:red;">Please, use lower case only.</p>
+      <ul>laws210</ul>
+      <ul>bancroft115</ul>
+      <ul>itl01</ul> <br>
+      <form action="resloc" method = "get">
+        Location:<br>
+        <input type="text" name="location" placeholder="Enter location here">
+        <input type="submit" class="button" value="Search">
+      </form>
+    </section>
+  </div>
+  <br>
+  <div class="container">
+    <section class="boxes">
+      <h5>Search by answer</h5>
+      <p>In this section you can pick a feedback option and search by it.</p>
+      <p>Please, select one of the below option and click on the "Search" button.</p><br>
+      <form action="resans" method="get">
+        <input type="radio" name="answer" value="bad"> Bad<br>
+        <input type="radio" name="answer" value="ok"> OK<br>
+        <input type="radio" name="answer" value="great"> Great<br>  
+        <br>
+        <input type="submit" class="button" value="Search">
+      </form>
+    </section>
+  </div>
+  <br>
+  <div class="container">
+    <section class="boxes">
+      <h5>Search by date</h5>
+      <p>A search by date is available below as well.</p>
+      <p style="color:red;">Please, enter dates below in the following format: mm/dd/yyyy, e.g. "06/26/2016".</p>
+      <form action="resdat" method = "get">
+        Date:<br>
+        <input type="text" name="date" placeholder="Enter date here">
+        <input type="submit" class="button" value="Search">
+      </form>
+    </section>
+  </div>
+  <br>
+  <div class="container">
+    <section class="boxes">
+      <p><b>If you need access to all our of records collected from all machines at QMUL, please use the button below:</b></p>
+      <button onclick="doDownload()" class="button">Get Data</button>
+      <script>
+        function doDownload() {
+          window.open("/alldata");
+        }
+      </script>
+    </section>
+  </div>
+  <br>
+  <footer></footer>
+</body>
+</html>

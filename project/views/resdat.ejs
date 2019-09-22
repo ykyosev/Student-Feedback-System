@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Search by Date</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+	<header>
+    <div class="container">
+      <h1>Students Feedback System</h1>
+    </div>
+  </header>
+
+  <div class="container">
+    <h3>Search by Date</h3>
+    <a href="/" class="button">Home</a><br>
+  </div>
+  <br>
+
+  <div class="container">
+    <table border="1">
+      <tr>
+        <td>Location</td>
+        <td>Date</td>
+        <td>Time</td>
+        <td>Answer</td>
+      </tr>
+      <% for(var i=0; i < dateans.length; i++) { %>
+      <tr>
+       <td><%- dateans[i].location %></td>
+       <td><%- dateans[i].date %></td>
+       <td><%- dateans[i].time %></td>
+       <td><%- dateans[i].answer %></td>
+     </tr>
+     <% } %>
+   </table>
+  </div>
+
+  <br>
+  <footer></footer>
+</body>
+</html> 
